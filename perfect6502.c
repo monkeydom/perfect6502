@@ -595,11 +595,12 @@ chipStatus()
 			readP(),
 			readIR());
 
-	if (clk)
+	if (clk) {
 		if (r_w)
 			printf(" R$%04X=$%02X", a, memory[a]);
 		else
 			printf(" W$%04X=$%02X", a, d);
+	}
 	printf("\n");
 }
 
